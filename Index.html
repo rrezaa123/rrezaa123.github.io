@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="Gaya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">MY <span>CV</span></a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="banner3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="banner2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="banner4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="banner1.mp4" autoplay muted loop></video>
+
+
+
+        <div class="content active">
+            <h1>I'm<br><span>Rahmat Reza Kurniawan</span></h1>
+            <p>Seorang mahasiswa jurusan Teknik Informatika UPI YPTK Padang</p>
+            <a href="https://mailto:rahmatreza830@gmail.com">My Contatc</a>
+        </div>
+
+        <div class="content">
+            <h2>About Me<br><span></span></h2>
+            <p>Nama : Rahmat Reza Kurniawan</br>
+                Tempat Tanggal Lahir : Kota Solok 09 Juni 2004</br>
+                 Alamat : Bukit Tandang, Solok, Sumatra Barat</p>
+                 <p>Riwayat Pendidikan:</br>
+                    -Smpn 4 Kubung</br>
+                    -Sman 1 Kubung</p>
+        </div>
+
+        <div class="content">
+            <h3>Hobby<br><span></span></h3>
+            <p>Saya memiliki Hobi rebahan sepanjang hari :)</br></p>
+                <u>Pengalaman:</Br></u><p>saya memiliki beberapa pengalaman dalam</br>
+                    menggunakan microsoft word, microsoft excel,</br>
+                       dan memahami dasar dari pengkodean html dan css.</p>
+        </div>
+
+        <div class="content">
+            <h4>More<br><span></span></h4>
+            <p>1.Yang saya pikirkan ketika mendengar mata kuliah ini adalah html.</br>
+                2.Kriteria Dosen yang idal menurut saya adalah Dosen yang Humbel.</br>
+                3.Sistem pembelajaran yang menarik yaitu tidak monoton dan konvensional.
+                <p>Ide saya yang membuat perkuliahaan menjadi menarik yaitu pemberian pertanyaan oleh dosen yang memiliki hadiah seperti permen atau sepeser uang bagi mahasiswa yang berhasil menjawab pertanyan tersebut, karena hal ini pernah dilakukan oleh salah seorang guru saya, dan hal tersebut terbukti membuat pembelajaran yang beliau berikan menjadi sangat menarik.</p>
+        </div>
+
+        <div class="media-icons">
+            <a href="https://www.facebook.com/rahmat.reza.585"> <i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/rezaa9__?igshid=ZDdkNTZiNTM="> <i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/085767246657"> <i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active">Home</div>
+            <div class="nav-btn">About</div>
+            <div class="nav-btn">Hobby</div>
+            <div class="nav-btn">More</div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        //javascipt for video slider 
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+               btn.classList.remove("active")
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active")
+            });
+
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        };
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+   
+</body>
+</html>
