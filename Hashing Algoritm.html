@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>HTML PyScript | Hashing Algorithm</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<style>
+
+    select{
+        width: 20%;
+        padding: 12px 20px;
+        margin: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=text]{
+        width: 98%;
+        padding: 12px 20px;
+        margin: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 98%;
+        background-color: #4c4faf;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center; 
+        align-items: flex-start;
+        font-size: 24px; /* Atur ukuran teks sesuai kebutuhan */
+        font-weight: bold; /* Atur ketebalan teks (bold) sesuai kebutuhan */
+        margin-top: 20px;
+    }
+
+    p {
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .out{
+        background-color: #f2f2f2;
+    }
+
+    body{
+        background-color: rgba(200, 200, 200, 0.8);
+    }
+
+/* CSS untuk perangkat dengan lebar layar maksimal 768px */
+@media screen and (max-width: 768px) {
+    select, input[type=text], input[type=submit] {
+        width: 100%; /* Mengisi seluruh lebar layar */
+        margin: 8px 0; /* Reset margin atas dan bawah */
+    }
+
+    .out p {
+        padding: 10px; /* Mengurangi padding output */
+        white-space: pre-line; /* Mengaktifkan pemutusan kata */
+    }
+}
+
+/* CSS untuk perangkat dengan lebar layar maksimal 480px (misalnya, perangkat seluler) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Ukuran teks yang lebih kecil */
+        margin-top: 10px; /* Margin atas yang lebih kecil */
+    }
+
+    
+}
+
+</style>
+
+<body>
+    <h1>Hashing Algorithm</h1>
+
+    <select name="countries" id="countries">
+        <option value="md5">MD5</option>
+        <option value="sha1">SHA-1</option>
+        <option value="sha244">SHA-244</option>
+        <option value="sha256">SHA-256</option>
+        <option value="sha384">SHA-384</option>
+        <option value="sha512">SHA-512</option>
+        <option value="sha3_224">SHA-3-224</option>
+        <option value="sha3_256">SHA-3-256</option>
+        <option value="sha3_384">SHA-3-384</option>
+        <option value="sha3_512">SHA-3-512</option>
+    </select>
+
+    <form onsubmit="return false">
+        <label for="name">Input:</label><br>
+        <input type="text" id="name" name="name" value="Hallo"><br>
+
+        <input pys-onClick="sub" type="submit" id="btn-form" value="Hashing">
+    </form> 
+
+    <div class="out">
+        <p id="output">Output:</p>
+    </div>
+
+    <py-script>
+        import hashlib
+
+        def sub(*args, **kwargs):
+            result_place = Element('output')
+            name = Element('name').value
+            algorithm = Element('countries').value
+
+            # Pilih algoritma berdasarkan pilihan pengguna
+            if algorithm == "md5":
+                hash_object = hashlib.md5()
+            elif algorithm == "sha1":
+                hash_object = hashlib.sha1()
+            elif algorithm == "sha224":
+                hash_object = hashlib.sha224()
+            elif algorithm == "sha256":
+                hash_object = hashlib.sha256()
+            elif algorithm == "sha384":
+                hash_object = hashlib.sha384()
+            elif algorithm == "sha512":
+                hash_object = hashlib.sha512()
+            elif algorithm == "sha3_224":
+                hash_object = hashlib.sha3_224()
+            elif algorithm == "sha3_256":
+                hash_object = hashlib.sha3_256()
+            elif algorithm == "sha3_384":
+                hash_object = hashlib.sha3_384()
+            else:
+                hash_object = hashlib.sha3_512()
+
+            # Update hash dengan teks nama (perlu diubah menjadi bytes terlebih dahulu)
+            hash_object.update(name.encode())
+
+            # Dapatkan hasil hash dalam format hexadecimal
+            hash_hex = hash_object.hexdigest()
+
+            result_place.write(f"Output : {hash_hex}")
+    </py-script>
+</body>
+</html>

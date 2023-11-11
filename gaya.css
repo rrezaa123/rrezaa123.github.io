@@ -1,0 +1,134 @@
+
+.jumbotron{
+    padding-top: 7rem;
+    background-color: rgba(0, 0, 0, 0.050);;
+}
+
+h3 {
+    font-weight: bold; /* Atur ketebalan teks */
+}
+
+.navbar-brand{
+    background-color: #D40000;
+    padding:  0.3rem 0.6rem;
+    font-family: 'Algerian';
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.navbar-nav a {
+    font-family: 'Bernard MT Condensed';
+    color: black; /* Warna teks awal */
+}
+
+.navbar-nav a:hover {
+    color: #D40000; /* Warna teks saat di-hover */
+}
+
+section{
+    padding-top: 5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+.instagram-link, .linkedin-link, .github-link{
+    padding: 0.33rem 1.3rem;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.instagram-link:hover, .linkedin-link:hover, .github-link:hover {
+    color: lightgray; /* Ganti warna latar belakang saat di hover */
+}
+
+body{
+    height: 100vh;
+    background-color: white;
+    background-position: center;
+}
+
+.kotakData{
+    display: flex;
+    justify-content: center;
+}
+
+.kotakData1, .kotakData2, .kotakData3 {
+    width: 105px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 30px;
+    background-color: rgba(128, 128, 128, 0.800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;  
+}
+
+.kotakData1 p, .kotakData2 p, .kotakData3 p {
+    width: 100%;  /* Lebar penuh dari elemen parent */
+    height: 100%; /* Tinggi penuh dari elemen parent */
+    margin: 0;    /* Hapus margin bawaan untuk menghindari gangguan */
+    text-align: center; /* Posisikan teks di tengah secara horizontal */
+    line-height: 1;     /* Atur tinggi baris agar teks di tengah secara vertikal */
+}
+
+/* Musik */
+.music-player {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    background:rgba( 0, 0, 0, 0.300);
+    width: 270px;
+    padding: 10px; /* Menambahkan padding untuk memberikan ruang di sekitar elemen */
+    border-radius: 5px; /* Menggunakan border-radius untuk sudut yang lebih lembut */
+    z-index: 4;
+    
+}
+
+
+.music-player button#playMusic {
+    margin-right: 10px; /* Tambahkan margin kanan sebesar 10px */
+    margin-left: 10px;
+}
+
+#musicIcon {
+    margin-right: 10px; /* Sesuaikan jarak dari judul musik */
+    color: black; /* Warna default ikon */
+}
+
+
+/* Card */
+.typed-cursor{
+    display: none;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* (Opsional) Agar teks menjadi rata tengah */
+}
+
+.card a {
+    font-family: 'Bernard MT Condensed';
+    color: black; /* Warna teks awal */
+}
+
+.card a:hover {
+    color: #D40000; /* Warna teks saat di-hover */
+}
+
+@font-face {
+    font-family: 'minecraft'; /* Nama yang Anda inginkan untuk font Anda */
+    src: url('Minecraft.ttf') format('truetype'); /* Sesuaikan path dan format font sesuai kebutuhan Anda */
+}
