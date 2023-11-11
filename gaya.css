@@ -59,8 +59,8 @@ body{
     justify-content: center;
 }
 
-.kotakData1, .kotakData2, .kotakData3 {
-    width: 105px;
+.kotakData1, .kotakData2 {
+    width: 70px;
     height: 40px;
     border-radius: 5px;
     margin-left: 30px;
@@ -71,7 +71,7 @@ body{
     padding: 10px;  
 }
 
-.kotakData1 p, .kotakData2 p, .kotakData3 p {
+.kotakData1 p, .kotakData2 p {
     width: 100%;  /* Lebar penuh dari elemen parent */
     height: 100%; /* Tinggi penuh dari elemen parent */
     margin: 0;    /* Hapus margin bawaan untuk menghindari gangguan */
