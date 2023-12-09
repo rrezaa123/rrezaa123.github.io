@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p</title>
+    <link rel="shortcut icon" type="icon" href="img/profil.png">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 45%; /* Sesuaikan ukuran yang diinginkan */
+            height: 85%; /* Sesuaikan ukuran yang diinginkan */
+            cursor: pointer; /* Menampilkan kursor pointer saat dihover */
+            transition: transform 0.3s ease-in-out; /* Efek transisi untuk perubahan ukuran */
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            img {
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="logo">
+        <a href="home.html">
+            <img src="img/Reza logo.png" alt="">
+        </a>
+    </section>
+</body>
+</html>
