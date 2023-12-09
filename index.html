@@ -37,8 +37,15 @@
 <body>
     <section class="logo">
         <a href="home.html">
-            <img src="img/Reza logo.png" alt="">
+            <img id="logoImage" src="img/Reza logo.png" alt="">
         </a>
     </section>
+
+    <script>
+        // Fungsi untuk pindah ke halaman home.html setelah 15 detik
+        setTimeout(function() {
+            window.location.href = "home.html";
+        }, 10000); // 15000 milidetik = 15 detik
+    </script>
 </body>
 </html>
