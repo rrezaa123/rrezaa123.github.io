@@ -42,13 +42,13 @@ section{
     font-family: 'Times New Roman';
 }
 
-.instagram-link, .linkedin-link, .github-link{
+.instagram-link, .linkedin-link, .github-link, .youtube-link{
     padding: 0.33rem 1.3rem;
     color: black;
     font-size: 1.4rem;
 }
 
-.instagram-link:hover, .linkedin-link:hover, .github-link:hover {
+.instagram-link:hover, .linkedin-link:hover, .github-link:hover, .youtube-link:hover{
     color: lightgray; /* Ganti warna latar belakang saat di hover */
 }
 
